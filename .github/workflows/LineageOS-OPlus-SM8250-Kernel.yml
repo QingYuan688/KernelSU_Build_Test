@@ -78,7 +78,7 @@ jobs:
         KSU_VERSION=$(cd KernelSU && expr $(/usr/bin/git rev-list --count HEAD) + 20000)
         echo "KSUVER=$KSU_VERSION" >> $GITHUB_ENV
         cd scripts
-        sed -i 's/ -dirty//g' setlocalversion
+        sed -i 's/ -MuLuo//g' setlocalversion
 
     - name: Build kernel with rsuntk KernelSU
       run: |
